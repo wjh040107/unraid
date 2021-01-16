@@ -1,0 +1,5 @@
+
+cd /usr/share/fonts
+wget ftp://192.168.10.6/wenquanyi.tar.gz
+tar zxvf wenquanyi.tar.gz
+rm -rf wenquanyi.tar.gz
