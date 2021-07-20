@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MQTT</Name>
+  <Repository>spants/mqtt</Repository>
+  <Registry>https://registry.hub.docker.com/r/spants/mqtt/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>http://lime-technology.com/forum/index.php?topic=38486.0</Support>
+  <Project/>
+  <Overview>&#xD;
+    MQTT for Unraid6 Docker Manager running on Port 1883 and 9001[br][br]&#xD;
+    MQTT is a machine-to-machine (M2M)/"Internet of Things" connectivity protocol. [br]&#xD;
+    It was designed as an extremely lightweight publish/subscribe messaging transport. [br]&#xD;
+    It is useful for connections with remote locations where a small code footprint is required [br]&#xD;
+    and/or network bandwidth is at a premium. For example, it has been used in sensors [br]&#xD;
+    communicating to a broker via satellite link, over occasional dial-up connections with [br]&#xD;
+    healthcare providers, and in a range of home automation and small device scenarios. [br]&#xD;
+    It is also ideal for mobile applications because of its small size, low power usage, [br]&#xD;
+    minimised data packets, and efficient distribution of information to one or many receivers[br]&#xD;
+    [br][br][br]&#xD;
+    This version supports passwords - see passwords.README in the /config directory.[br]&#xD;
+    Also supported are websockets and certificates.[br]&#xD;
+    [br]&#xD;
+    The docker is built on a LinuxServer.io template, but be assured that any bugs are mine!.[br]&#xD;
+  </Overview>
+  <Category>HomeAutomation:</Category>
+  <WebUI>http://mqtt.org/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/spants/unraidtemplates/master/Spants/MQTT.xml</TemplateURL>
+  <Icon>https://i.imgur.com/Cc9Jkcr.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1617531279</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>&#xD;
+    MQTT for Unraid6 Docker Manager running on Port 1883 and 9001[br][br]&#xD;
+    MQTT is a machine-to-machine (M2M)/"Internet of Things" connectivity protocol. [br]&#xD;
+    It was designed as an extremely lightweight publish/subscribe messaging transport. [br]&#xD;
+    It is useful for connections with remote locations where a small code footprint is required [br]&#xD;
+    and/or network bandwidth is at a premium. For example, it has been used in sensors [br]&#xD;
+    communicating to a broker via satellite link, over occasional dial-up connections with [br]&#xD;
+    healthcare providers, and in a range of home automation and small device scenarios. [br]&#xD;
+    It is also ideal for mobile applications because of its small size, low power usage, [br]&#xD;
+    minimised data packets, and efficient distribution of information to one or many receivers[br]&#xD;
+    [br][br][br]&#xD;
+    This version supports passwords - see passwords.README in the /config directory.[br]&#xD;
+    Also supported are websockets and certificates.[br]&#xD;
+    [br]&#xD;
+    The docker is built on a LinuxServer.io template, but be assured that any bugs are mine!.[br]&#xD;
+  </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1883</HostPort>
+        <ContainerPort>1883</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9001</HostPort>
+        <ContainerPort>9001</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/MQTT</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Port 1" Target="1883" Default="1883" Mode="tcp" Description="Container Port: 1883" Type="Port" Display="always" Required="true" Mask="false">1883</Config>
+  <Config Name="Port 2" Target="9001" Default="9001" Mode="tcp" Description="Container Port: 9001" Type="Port" Display="always" Required="true" Mask="false">9001</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/MQTT" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/MQTT</Config>
+</Container>

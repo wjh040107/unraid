@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>FileBrowser</Name>
+  <Repository>80x86/filebrowser:amd64</Repository>
+  <Registry>https://hub.docker.com/r/80x86/filebrowser</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://www.lxg2016.com/54202.html</Support>
+  <Project>https://hub.docker.com/r/80x86/filebrowser</Project>
+  <Overview/>
+  <Category>Cloud: Network:Web Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:8083]</WebUI>
+  <TemplateURL/>
+  <Icon>https://github.com/maschhoff/docker/raw/master/filebrowser/35781395.png</Icon>
+  <ExtraParams>--mount type=tmpfs,destination=/tmp</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1611026073</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user</HostDir>
+      <ContainerDir>/myfiles</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/FileBrowser</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>on</Value>
+      <Name>SSL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK_SET</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>8083</Value>
+      <Name>WEB_PORT</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="&#x6587;&#x4EF6;&#x8DEF;&#x5F84;" Target="/myfiles" Default="&#x60F3;&#x7BA1;&#x7406;&#x7684;&#x8DEF;&#x5F84;" Mode="rw" Description="&#x6587;&#x4EF6;&#x8DEF;&#x5F84;" Type="Path" Display="always" Required="true" Mask="false">/mnt/user</Config>
+  <Config Name="User ID" Target="PUID" Default="0" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="Group ID" Target="PGID" Default="0" Mode="" Description="ID of the group the application runs as." Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="SSL" Target="SSL" Default="on&#x6216;off" Mode="" Description="Container Variable: SSL" Type="Variable" Display="always" Required="false" Mask="false">on</Config>
+  <Config Name="UMASK_SET" Target="UMASK_SET" Default="000" Mode="" Description="Container Variable: UMASK_SET" Type="Variable" Display="always" Required="false" Mask="false">000</Config>
+  <Config Name="WebUI Port" Target="WEB_PORT" Default="8083" Mode="" Description="Container Port: 8083" Type="Variable" Display="always" Required="false" Mask="false">8083</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/FileBrowser" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/FileBrowser</Config>
+</Container>

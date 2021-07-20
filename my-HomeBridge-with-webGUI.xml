@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>HomeBridge-with-webGUI</Name>
+  <Repository>siwatinc/homebridge_gui_unraid</Repository>
+  <Registry>https://hub.docker.com/r/siwatinc/homebridge_gui_unraid/</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/75588-support-siwats-docker-repository/</Support>
+  <Project>https://github.com/nfarina/homebridge/</Project>
+  <Overview>&#xD;
+    Homebridge with GUI (default user:pass=admin:admin) is a lightweight NodeJS server you can run on your home network that emulates the iOS HomeKit API. It supports Plugins, which are community-contributed modules that provide a basic bridge from HomeKit to various 3rd-party APIs provided by manufacturers of "smart home" devices.&#xD;
+    Instruction:&#xD;
+      1. in the "packages" variable, place the all packages name you wanted in the box seperated by space (Example is in the box, Plugin list is in https://www.npmjs.com/search?q=homebridge-plugin)&#xD;
+      2. create the container&#xD;
+      3. create the config.json in the homebridge directory (/mnt/user/appdata/homebridge/config.json)&#xD;
+      4. add your devices to the config.json by refering to https://github.com/nfarina/homebridge&#xD;
+  </Overview>
+  <Category>HomeAutomation: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8124]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/docker-template/homebridge_ui.xml</TemplateURL>
+  <Icon>https://i1.wp.com/www.deviousweb.com/wp-content/uploads/2017/06/HomeKit.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1617492696</DateInstalled>
+  <DonateText>If you like it, then consider buying me a soda as I don&amp;amp;#39;t like beer :P</DonateText>
+  <DonateLink>https://www.paypal.me/siwatsirichai</DonateLink>
+  <Description>&#xD;
+    Homebridge with GUI (default user:pass=admin:admin) is a lightweight NodeJS server you can run on your home network that emulates the iOS HomeKit API. It supports Plugins, which are community-contributed modules that provide a basic bridge from HomeKit to various 3rd-party APIs provided by manufacturers of "smart home" devices.&#xD;
+    Instruction:&#xD;
+      1. in the "packages" variable, place the all packages name you wanted in the box seperated by space (Example is in the box, Plugin list is in https://www.npmjs.com/search?q=homebridge-plugin)&#xD;
+      2. create the container&#xD;
+      3. create the config.json in the homebridge directory (/mnt/user/appdata/homebridge/config.json)&#xD;
+      4. add your devices to the config.json by refering to https://github.com/nfarina/homebridge&#xD;
+  </Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/homebridge</HostDir>
+      <ContainerDir>/root/.homebridge</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>ffmpeg</Value>
+      <Name>aptpackages</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>homebridge-pilight homebridge-info</Value>
+      <Name>packages</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="APT Packages" Target="aptpackages" Default="ffmpeg" Mode="" Description="The name of the apt packages you wish to install (Seperated by Space)" Type="Variable" Display="always" Required="true" Mask="false">ffmpeg</Config>
+  <Config Name="Plugins" Target="packages" Default="homebridge-pilight homebridge-info" Mode="" Description="The name of the plugins you wish to install (Seperated by Space, They can be NPM Packages)" Type="Variable" Display="always" Required="true" Mask="false">homebridge-pilight homebridge-info</Config>
+  <Config Name="Config Folder" Target="/root/.homebridge" Default="/mnt/user/appdata/homebridge" Mode="rw" Description="This is the Config Directory for the Homebridge Application" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/homebridge</Config>
+</Container>
