@@ -17,7 +17,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1603973135</DateInstalled>
+  <DateInstalled>1629981407</DateInstalled>
   <DonateText>Donations</DonateText>
   <DonateLink>https://www.linuxserver.io/donate</DonateLink>
   <Description>Resilio Sync (formerly BitTorrent Sync) uses the BitTorrent protocol to sync files and folders between all of your devices. There are both free and paid versions, this container supports both.</Description>

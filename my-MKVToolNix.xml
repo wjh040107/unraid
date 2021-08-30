@@ -27,7 +27,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1611707303</DateInstalled>
+  <DateInstalled>1630318256</DateInstalled>
   <DonateText/>
   <DonateLink>https://paypal.me/JocelynLeSage/0usd</DonateLink>
   <Description>&#xD;
@@ -69,6 +69,11 @@
     </Volume>
   </Data>
   <Environment>
+    <Variable>
+      <Value>1</Value>
+      <Name>ENABLE_CJK_FONT</Name>
+      <Mode/>
+    </Variable>
     <Variable>
       <Value>99</Value>
       <Name>USER_ID</Name>
@@ -112,6 +117,7 @@
   </Environment>
   <Labels/>
   <Config Name="Storage" Target="/storage" Default="/mnt/user" Mode="rw" Description="This location contains files from your host that need to be accessible by the application.&amp;lt;br&amp;gt;Container path: /storage" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/Movie/</Config>
+  <Config Name="&#x4E2D;&#x6587;" Target="ENABLE_CJK_FONT" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: ENABLE_CJK_FONT" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
   <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/MKVToolNix" Mode="rw" Description="This is where the application stores its configuration, log and any files needing persistency.&amp;lt;br&amp;gt;Container path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/MKVToolNix</Config>
   <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="Group ID" Target="GROUP_ID" Default="100" Mode="" Description="ID of the group the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>

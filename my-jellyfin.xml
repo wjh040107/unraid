@@ -17,7 +17,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1627118623</DateInstalled>
+  <DateInstalled>1629982230</DateInstalled>
   <DonateText>Donations</DonateText>
   <DonateLink>https://www.linuxserver.io/donations/</DonateLink>
   <Description>Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps.[br][br][b][u][span style='color: #E80000;']Nvidia GPU Use[/span][/u][/b][br]Using the Unraid Nvidia Plugin to install a version of Unraid with the Nvidia Drivers installed and[br] add [b]--runtime=nvidia[/b] to [b]"extra parameters"[/b] (switch on advanced view) and[br]copy your [b]GPU UUID[/b] to [b]NVIDIA_VISIBLE_DEVICES.[/b][br][br][b][u][span style='color: #E80000;']Intel GPU Use[/span][/u][/b][br]Edit your [b]go[/b] file to include:[br][b]modprobe i915[br][/b], save and reboot, then [br]add [b]--device=/dev/dri[/b] to [b]"extra parameters"[/b] (switch on advanced view)</Description>
@@ -48,8 +48,8 @@
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/TV/</HostDir>
-      <ContainerDir>/TV</ContainerDir>
+      <HostDir>/mnt/user/Music/</HostDir>
+      <ContainerDir>/music</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
@@ -85,7 +85,7 @@
   <Config Name="Webui - HTTPS&#x7AEF;&#x53E3;" Target="8920" Default="" Mode="tcp" Description="Webui - HTTPS&#x7AEF;&#x53E3;" Type="Port" Display="always" Required="false" Mask="false">8920</Config>
   <Config Name="Service Discovery" Target="1900" Default="" Mode="udp" Description="Service Discovery (Optional)" Type="Port" Display="always" Required="false" Mask="false">1900</Config>
   <Config Name="Movies&#x6587;&#x4EF6;&#x8DEF;&#x5F84;" Target="/movies" Default="" Mode="rw" Description="Movies&#x6587;&#x4EF6;&#x8DEF;&#x5F84;" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Movie/</Config>
-  <Config Name="TV&#x6587;&#x4EF6;&#x8DEF;&#x5F84;" Target="/TV" Default="" Mode="rw" Description="TV&#x6587;&#x4EF6;&#x8DEF;&#x5F84;" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/TV/</Config>
+  <Config Name="Music&#x6587;&#x4EF6;&#x8DEF;&#x5F84;" Target="/music" Default="" Mode="rw" Description="Music&#x6587;&#x4EF6;&#x8DEF;&#x5F84;" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Music/</Config>
   <Config Name="Nvidia Visible Devices" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="Nvidia Visible Devices (Optional - Requires Nvidia GPU and Unraid Nvidia build)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="&#x96C6;&#x663E;&#x9A71;&#x52A8;&#x8DEF;&#x5F84;" Target="" Default="" Mode="" Description="&#x96C6;&#x663E;&#x9A71;&#x52A8;&#x8DEF;&#x5F84;&#xFF1A; /dev/dri" Type="Device" Display="always" Required="false" Mask="false">/dev/dri</Config>
   <Config Name="&#x5B57;&#x4F53;" Target="/usr/share/fonts" Default="" Mode="ro" Description="&#x5BB9;&#x5668; Path: /usr/share/fonts" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/fonts</Config>

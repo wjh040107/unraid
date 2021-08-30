@@ -17,7 +17,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1604057914</DateInstalled>
+  <DateInstalled>1629983016</DateInstalled>
   <DonateText>Donations</DonateText>
   <DonateLink>https://www.linuxserver.io/donate</DonateLink>
   <Description>Transmission is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, &#xB5;TP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more.</Description>

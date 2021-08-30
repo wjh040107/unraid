@@ -17,7 +17,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1617456944</DateInstalled>
+  <DateInstalled>1630289560</DateInstalled>
   <DonateText>Donations</DonateText>
   <DonateLink>https://www.linuxserver.io/donate</DonateLink>
   <Description>DAAP (iTunes) media server with support for AirPlay devices, Apple Remote (and compatibles), MPD and internet radio.</Description>
