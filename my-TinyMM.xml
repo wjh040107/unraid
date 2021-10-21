@@ -4,7 +4,7 @@
   <Repository>romancin/tinymediamanager</Repository>
   <Registry>https://registry.hub.docker.com/r/romancin/tinymediamanager</Registry>
   <Network>br0</Network>
-  <MyIP>192.168.10.15</MyIP>
+  <MyIP>192.168.10.6</MyIP>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>http://lime-technology.com/forum/index.php?topic=39623.0</Support>
@@ -17,7 +17,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1629980582</DateInstalled>
+  <DateInstalled>1634785670</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Tiny Media Manager.</Description>
