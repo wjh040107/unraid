@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>deepstack-ui</Name>
+  <Repository>robmarkcole/deepstack-ui</Repository>
+  <Registry>https://hub.docker.com/r/robmarkcole/deepstack-ui</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/robmarkcole/deepstack-ui</Project>
+  <Overview>UI for working with Deepstack. Allows uploading an image and performing object detection or face recognition with Deepstack. Also faces can be registered with Deepstack. The effect of various parameters can be explored, including filtering objects by confidence, type and location in the image. Created by robmarkcole.&#xD;
+&#xD;
+*I am not the creator or maintainer of this container I am merely providing the Unraid template.</Overview>
+  <Category>HomeAutomation: Tools:Utilities Other:</Category>
+  <WebUI>http://[IP]:[PORT:8501]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/n8detar/docker-templates/master/n8detar/deepstack-ui.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/n8detar/docker-templates/master/n8detar/images/deepstack-ui.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1634219740</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>UI for working with Deepstack. Allows uploading an image and performing object detection or face recognition with Deepstack. Also faces can be registered with Deepstack. The effect of various parameters can be explored, including filtering objects by confidence, type and location in the image. Created by robmarkcole.&#xD;
+&#xD;
+*I am not the creator or maintainer of this container I am merely providing the Unraid template.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8501</HostPort>
+        <ContainerPort>8501</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value>192.168.10.2</Value>
+      <Name>DEEPSTACK_IP</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>5000</Value>
+      <Name>DEEPSTACK_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>DEEPSTACK_API_KEY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>10</Value>
+      <Name>DEEPSTACK_TIMEOUT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>DEEPSTACK_CUSTOM_MODEL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>False</Value>
+      <Name>DEEPSTACK_UI_DEBUG_MODE</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI" Target="8501" Default="8501" Mode="tcp" Description="For access to the Web UI. Default is 8501." Type="Port" Display="always" Required="true" Mask="false">8501</Config>
+  <Config Name="Deepstack IP" Target="DEEPSTACK_IP" Default="localhost" Mode="" Description="The IP address of your Deepstack instance. Default is localhost." Type="Variable" Display="always" Required="true" Mask="false">192.168.10.2</Config>
+  <Config Name="Deepstack Port" Target="DEEPSTACK_PORT" Default="80" Mode="" Description="The PORT of your Deepstack instance. Default is 80. " Type="Variable" Display="always" Required="true" Mask="false">5000</Config>
+  <Config Name="Deepstack API Key" Target="DEEPSTACK_API_KEY" Default="" Mode="" Description="The API key of your Deepstack instance, if you have set one." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Deepstack Timeout" Target="DEEPSTACK_TIMEOUT" Default="10" Mode="" Description="The timeout to wait for Deepstack. Default is 10 seconds." Type="Variable" Display="always" Required="false" Mask="false">10</Config>
+  <Config Name="Deepstack Custom Model" Target="DEEPSTACK_CUSTOM_MODEL" Default="" Mode="" Description="The name of a custom model, if you wish to use one." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Deepstack UI Debug Mode" Target="DEEPSTACK_UI_DEBUG_MODE" Default="False|True" Mode="" Description="Lowers the minimum confidence threshold to 1%. Default is False." Type="Variable" Display="always" Required="false" Mask="false">False</Config>
+</Container>
