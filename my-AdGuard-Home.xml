@@ -3,8 +3,8 @@
   <Name>AdGuard-Home</Name>
   <Repository>adguard/adguardhome</Repository>
   <Registry>https://registry.hub.docker.com/r/adguard/adguardhome</Registry>
-  <Network>br0</Network>
-  <MyIP>192.168.10.8</MyIP>
+  <Network>host</Network>
+  <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/75588-support-siwats-docker-repository/</Support>
@@ -18,13 +18,13 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1643966802</DateInstalled>
+  <DateInstalled>1643973374</DateInstalled>
   <DonateText>If you like it, then consider buying me a soda as I don&amp;amp;#39;t like beer :P</DonateText>
   <DonateLink>https://www.paypal.me/siwatsirichai</DonateLink>
   <Description>AdGuard Home is a network-wide software for blocking ads &amp;amp; tracking. After you set it up, it&#x2019;ll cover ALL your home devices, and you don&#x2019;t need any client-side software for that. With the rise of Internet-Of-Things and connected devices, it becomes more and more important to be able to control your whole network.&#xD;
 </Description>
   <Networking>
-    <Mode>br0</Mode>
+    <Mode>host</Mode>
     <Publish>
       <Port>
         <HostPort>3000</HostPort>
