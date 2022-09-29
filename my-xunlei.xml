@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>xunlei</Name>
+  <Repository>cnk3x/xunlei</Repository>
+  <Registry/>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:2345]/</WebUI>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1662425969</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/disk2/xunlei/</HostDir>
+      <ContainerDir>/xunlei/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/xunlei/</HostDir>
+      <ContainerDir>/conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="&#x4E0B;&#x8F7D;&#x8DEF;&#x5F84;" Target="/xunlei/downloads" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /xunlei/downloads" Type="Path" Display="always" Required="false" Mask="false">/mnt/disk2/xunlei/</Config>
+  <Config Name="Config Storage Path" Target="/conf" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /xunlei/downloads" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/xunlei/</Config>
+</Container>

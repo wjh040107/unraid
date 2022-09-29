@@ -10,7 +10,7 @@
   <Support>https://forums.unraid.net/topic/51613-support-linuxserverio-resilio-sync/</Support>
   <Project>https://www.resilio.com/individuals/</Project>
   <Overview>Resilio Sync (formerly BitTorrent Sync) uses the BitTorrent protocol to sync files and folders between all of your devices. There are both free and paid versions, this container supports both.</Overview>
-  <Category>Backup: Cloud: Network:Other Tools:Utilities</Category>
+  <Category>Backup: Cloud: Network:Other Tools:</Category>
   <WebUI>http://[IP]:[PORT:8888]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/resilio-sync.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/resilio.png</Icon>

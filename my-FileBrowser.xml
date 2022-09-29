@@ -4,7 +4,7 @@
   <Repository>filebrowser/filebrowser</Repository>
   <Registry>https://hub.docker.com/r/filebrowser/filebrowser</Registry>
   <Network>br0</Network>
-  <MyIP>192.168.10.7</MyIP>
+  <MyIP>192.168.10.4</MyIP>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/78481-support-knex666-filebrowser/</Support>
@@ -20,14 +20,14 @@ Example&#xD;
 &#xD;
 Read&#xD;
 https://docs.filebrowser.xyz/configuration for the config</Overview>
-  <Category>Cloud: Network:Web</Category>
+  <Category>Cloud: Network:Web Status:Stable</Category>
   <WebUI>http://[IP]/files/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-filebrowser.xml</TemplateURL>
   <Icon>https://github.com/maschhoff/docker/raw/master/filebrowser/35781395.png</Icon>
   <ExtraParams/>
   <PostArgs>-d /db/database.db</PostArgs>
   <CPUset/>
-  <DateInstalled>1634785691</DateInstalled>
+  <DateInstalled>1660825224</DateInstalled>
   <DonateText>If you like my work buy me a Pizza ;)</DonateText>
   <DonateLink>https://www.buymeacoffee.com/maschhoff</DonateLink>
   <Description>File Browser - Webbased File Browser including sharing functions etc.&#xD;

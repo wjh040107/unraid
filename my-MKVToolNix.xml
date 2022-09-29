@@ -9,16 +9,16 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/58039-support-mkvtoolnix/</Support>
   <Project>https://mkvtoolnix.download/</Project>
-  <Overview>&#xD;
-    MKVToolNix is a set of tools to create, alter and inspect Matroska files.&#xD;
-    [br][br]&#xD;
-    The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client.&#xD;
-    Also, being based on Alpine Linux, size of this container&#xD;
-    is very small (less than 100MB in download size).&#xD;
-    [br][br][span][/span]&#xD;
-    For a complete documentation of this container, see&#xD;
-    [a href="https://github.com/jlesage/docker-mkvtoolnix/blob/master/README.md"]&#xD;
-    https://github.com/jlesage/docker-mkvtoolnix/blob/master/README.md[/a].&#xD;
+  <Overview>
+MKVToolNix is a set of tools to create, alter and inspect Matroska files.
+
+The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client.
+
+Also, being based on Alpine Linux, size of this container is very small (less
+than 100MB in download size).
+
+For a complete documentation of this container, see
+https://github.com/jlesage/docker-mkvtoolnix/blob/master/README.md
   </Overview>
   <Category>MediaApp:Video</Category>
   <WebUI>http://[IP]:[PORT:5800]</WebUI>
@@ -118,7 +118,7 @@
   <Labels/>
   <Config Name="Storage" Target="/storage" Default="/mnt/user" Mode="rw" Description="This location contains files from your host that need to be accessible by the application.&amp;lt;br&amp;gt;Container path: /storage" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/Movie/</Config>
   <Config Name="&#x4E2D;&#x6587;" Target="ENABLE_CJK_FONT" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: ENABLE_CJK_FONT" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
-  <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/MKVToolNix" Mode="rw" Description="This is where the application stores its configuration, log and any files needing persistency.&amp;lt;br&amp;gt;Container path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/MKVToolNix</Config>
+  <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/mkvtoolnix" Mode="rw" Description="This is where the application stores its configuration, log and any files needing persistency.&amp;lt;br&amp;gt;Container path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/MKVToolNix</Config>
   <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="Group ID" Target="GROUP_ID" Default="100" Mode="" Description="ID of the group the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
   <Config Name="Umask" Target="UMASK" Default="000" Mode="" Description="Mask that controls how file permissions are set for newly created files. The value of the mask is in octal notation." Type="Variable" Display="advanced" Required="false" Mask="false">000</Config>
@@ -127,6 +127,6 @@
   <Config Name="Display Height" Target="DISPLAY_HEIGHT" Default="768" Mode="" Description="Height (in pixels) of the application's window." Type="Variable" Display="advanced" Required="false" Mask="false">768</Config>
   <Config Name="Secure Connection" Target="SECURE_CONNECTION" Default="0" Mode="" Description="Whether or not an encrypted connection should be used to access the application's GUI.  Set to &amp;lt;i&amp;gt;&amp;lt;b&amp;gt;1&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt; to encrypt the connection.&amp;lt;br&amp;gt;&amp;lt;span style='color: red;'&amp;gt;&amp;lt;b&amp;gt;Note:&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt; When enabling the secure connection, security parameters needs to be generated.  This &amp;lt;b&amp;gt;one-time&amp;lt;/b&amp;gt; operation is done during container startup.  Depending on your system, this could take a few minutes.  GUI of the application won't be available until the operation completes." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
   <Config Name="Extra x11vnc Options" Target="X11VNC_EXTRA_OPTS" Default="" Mode="" Description="Extra options to pass to the x11vnc server running in the Docker container.&amp;lt;br&amp;gt;&amp;lt;span style='color: red;'&amp;gt;&amp;lt;b&amp;gt;Warning:&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt; For advanced users. Do not use unless you know what you are doing." Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="WEB Port for GUI" Target="5800" Default="7805" Mode="tcp" Description="Port used to access the application's GUI via the web interface." Type="Port" Display="advanced-hide" Required="true" Mask="false">7805</Config>
-  <Config Name="VNC Port for GUI" Target="5900" Default="7905" Mode="tcp" Description="Port used to access the application's GUI via the VNC protocol.  Optional if no VNC client is used." Type="Port" Display="advanced-hide" Required="false" Mask="false">7905</Config>
+  <Config Name="WEB Port for GUI" Target="5800" Default="7805" Mode="tcp" Description="Port used to access the application's GUI via the web interface.&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;NOTE:&amp;lt;/b&amp;gt; This applies only when &amp;lt;i&amp;gt;Network Type&amp;lt;/i&amp;gt; is set to &amp;lt;i&amp;gt;Bridge&amp;lt;/i&amp;gt;.  For other network types, port 5800 should be used instead." Type="Port" Display="advanced-hide" Required="true" Mask="false">7805</Config>
+  <Config Name="VNC Port for GUI" Target="5900" Default="7905" Mode="tcp" Description="Port used to access the application's GUI via the VNC protocol.  Optional if no VNC client is used.&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;NOTE:&amp;lt;/b&amp;gt; This applies only when &amp;lt;i&amp;gt;Network Type&amp;lt;/i&amp;gt; is set to &amp;lt;i&amp;gt;Bridge&amp;lt;/i&amp;gt;.  For other network types, port 5900 should be used instead." Type="Port" Display="advanced-hide" Required="false" Mask="false">7905</Config>
 </Container>

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>MQTT</Name>
-  <Repository>spants/mqtt</Repository>
-  <Registry>https://registry.hub.docker.com/r/spants/mqtt/</Registry>
+  <Name>emqx</Name>
+  <Repository>emqx/emqx</Repository>
+  <Registry>https://registry.hub.docker.com/r/emqx/emqx/</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
@@ -32,7 +32,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1638842985</DateInstalled>
+  <DateInstalled>1638842741</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>&#xD;
@@ -60,8 +60,28 @@
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>9001</HostPort>
-        <ContainerPort>9001</ContainerPort>
+        <HostPort>8081</HostPort>
+        <ContainerPort>8081</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8083</HostPort>
+        <ContainerPort>8083</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8883</HostPort>
+        <ContainerPort>8883</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8084</HostPort>
+        <ContainerPort>8084</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>18083</HostPort>
+        <ContainerPort>18083</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -76,6 +96,10 @@
   <Environment/>
   <Labels/>
   <Config Name="Port 1" Target="1883" Default="1883" Mode="tcp" Description="Container Port: 1883" Type="Port" Display="always" Required="true" Mask="false">1883</Config>
-  <Config Name="Port 2" Target="9001" Default="9001" Mode="tcp" Description="Container Port: 9001" Type="Port" Display="always" Required="true" Mask="false">9001</Config>
+  <Config Name="Port 2" Target="8081" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 8081" Type="Port" Display="always" Required="false" Mask="false">8081</Config>
+  <Config Name="Port 3" Target="8083" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 8083" Type="Port" Display="always" Required="false" Mask="false">8083</Config>
+  <Config Name="Port 4" Target="8883" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 8883" Type="Port" Display="always" Required="false" Mask="false">8883</Config>
+  <Config Name="Port 5" Target="8084" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 8084" Type="Port" Display="always" Required="false" Mask="false">8084</Config>
+  <Config Name="Port 6" Target="18083" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 18083" Type="Port" Display="always" Required="false" Mask="false">18083</Config>
   <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/MQTT" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/MQTT</Config>
 </Container>

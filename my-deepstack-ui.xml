@@ -19,7 +19,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1634219740</DateInstalled>
+  <DateInstalled>1654368896</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>UI for working with Deepstack. Allows uploading an image and performing object detection or face recognition with Deepstack. Also faces can be registered with Deepstack. The effect of various parameters can be explored, including filtering objects by confidence, type and location in the image. Created by robmarkcole.&#xD;

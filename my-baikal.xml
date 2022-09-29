@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>baikal</Name>
+  <Repository>ckulka/baikal:nginx</Repository>
+  <Registry>https://hub.docker.com/r/ckulka/baikal/</Registry>
+  <Network>br0</Network>
+  <MyIP>192.168.10.8</MyIP>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/112086-support-joshndroids-docker-repo-support-thread/</Support>
+  <Project>https://github.com/ckulka/baikal-docker</Project>
+  <Overview>Ba&#xEF;kal is a lightweight CalDAV+CardDAV server</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Joshndroid/joshndroid-unraid-docker-templates/master/templates/baikal.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Joshndroid/joshndroid-unraid-docker-templates/main/icons/baikal.png</Icon>
+  <ExtraParams>--restart=always</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1663993284</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Ba&#xEF;kal is a lightweight CalDAV+CardDAV server</Description>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/baikal/config</HostDir>
+      <ContainerDir>/var/www/baikal/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/baikal/specific</HostDir>
+      <ContainerDir>/var/www/baikal/Specific</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Config" Target="/var/www/baikal/config" Default="/mnt/user/appdata/baikal/config" Mode="rw" Description="Container Path: /var/www/baikal/config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/baikal/config</Config>
+  <Config Name="Container Port" Target="80" Default="80" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">80</Config>
+  <Config Name="Specific" Target="/var/www/baikal/Specific" Default="/mnt/user/appdata/baikal/specific" Mode="rw" Description="Container Path: /var/www/baikal/Specific" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/baikal/specific</Config>
+</Container>

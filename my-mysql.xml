@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>mysql</Name>
+  <Repository>mysql</Repository>
+  <Registry>https://registry.hub.docker.com/_/mysql/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>http://lime-technology.com/forum/index.php?topic=38930.0</Support>
+  <Project/>
+  <Overview>Official docker image for mysql database server.&#xD;
+	Set the database name, root password, mysql user name, and mysql user password.</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/jshridha/templates/master/Bungy/mysql.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/docker-library/docs/master/mysql/logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1664009696</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Official docker image for mysql database server.&#xD;
+	Set the database name, root password, mysql user name, and mysql user password.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3306</HostPort>
+        <ContainerPort>3306</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/mysql</HostDir>
+      <ContainerDir>/var/lib/mysql</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>root</Value>
+      <Name>MYSQL_ROOT_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>admin</Value>
+      <Name>MYSQL_DATABASE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>wjh</Value>
+      <Name>MYSQL_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>040107</Value>
+      <Name>MYSQL_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Port 1" Target="3306" Default="3306" Mode="tcp" Description="Container Port: 3306" Type="Port" Display="always" Required="true" Mask="false">3306</Config>
+  <Config Name="Host Path 1" Target="/var/lib/mysql" Default="/mnt/user/appdata/mysql" Mode="rw" Description="Container Path: /var/lib/mysql" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mysql</Config>
+  <Config Name="Key 1" Target="MYSQL_ROOT_PASSWORD" Default="root_password" Mode="" Description="Container Variable: MYSQL_ROOT_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">root</Config>
+  <Config Name="Key 2" Target="MYSQL_DATABASE" Default="owncloud" Mode="" Description="Container Variable: MYSQL_DATABASE" Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
+  <Config Name="Key 3" Target="MYSQL_USER" Default="mysql_user" Mode="" Description="Container Variable: MYSQL_USER" Type="Variable" Display="always" Required="false" Mask="false">wjh</Config>
+  <Config Name="Key 4" Target="MYSQL_PASSWORD" Default="mysql_password" Mode="" Description="Container Variable: MYSQL_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">040107</Config>
+</Container>

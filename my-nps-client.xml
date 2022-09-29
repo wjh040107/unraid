@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>nps-client</Name>
+  <Repository>ffdfgdfg/npc</Repository>
+  <Registry>https://hub.docker.com/r/ffdfgdfg/npc</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/ehang-io/nps</Support>
+  <Project>https://github.com/ehang-io/nps</Project>
+  <Overview>a lightweight, high-performance, powerful intranet penetration proxy server, with a powerful web management terminal.</Overview>
+  <Category>Tools:Utilities Network:Other</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/L1cardo/Unraid-Templates/main/nps-client/nps-client.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/L1cardo/Unraid-Templates/main/nps-client/nps-client-icon.png</Icon>
+  <ExtraParams>--restart always</ExtraParams>
+  <PostArgs>-config=/conf/npc.conf</PostArgs>
+  <CPUset/>
+  <DateInstalled>1634996566</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>a lightweight, high-performance, powerful intranet penetration proxy server, with a powerful web management terminal.</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nps-client</HostDir>
+      <ContainerDir>/conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Config path" Target="/conf" Default="" Mode="rw" Description="In roder to start npc client, make sure to place your 'npc.conf' file to this path " Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/nps-client</Config>
+</Container>

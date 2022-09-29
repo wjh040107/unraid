@@ -1,26 +1,26 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>daapd</Name>
-  <Repository>linuxserver/daapd</Repository>
-  <Registry>https://hub.docker.com/r/linuxserver/daapd/</Registry>
+  <Repository>lscr.io/linuxserver/daapd</Repository>
+  <Registry>https://github.com/orgs/linuxserver/packages/container/package/daapd</Registry>
   <Network>host</Network>
   <MyIP/>
-  <Shell>sh</Shell>
+  <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/42513-support-linuxserverio-daapd/</Support>
-  <Project>https://ejurgensen.github.io/forked-daapd/</Project>
-  <Overview>DAAP (iTunes) media server with support for AirPlay devices, Apple Remote (and compatibles), MPD and internet radio.</Overview>
-  <Category>MediaApp:Music MediaServer:Music</Category>
-  <WebUI>http://[IP]:[PORT:3689]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/daapd.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/linuxserver/beta-templates/master/lsiodev/img/daapd-icon.png</Icon>
+  <Support>https://github.com/linuxserver/docker-daapd/issues/new/choose</Support>
+  <Project>https://owntone.github.io/owntone-server/</Project>
+  <Overview>Daapd(https://owntone.github.io/owntone-server/) (iTunes) media server with support for AirPlay devices, Apple Remote (and compatibles), Chromecast, MPD and internet radio.</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:3689]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/templates/master/unraid/daapd.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver-ls-logo.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1634696128</DateInstalled>
+  <DateInstalled>1663989251</DateInstalled>
   <DonateText>Donations</DonateText>
   <DonateLink>https://www.linuxserver.io/donate</DonateLink>
-  <Description>DAAP (iTunes) media server with support for AirPlay devices, Apple Remote (and compatibles), MPD and internet radio.</Description>
+  <Description>Daapd(https://owntone.github.io/owntone-server/) (iTunes) media server with support for AirPlay devices, Apple Remote (and compatibles), Chromecast, MPD and internet radio.</Description>
   <Networking>
     <Mode>host</Mode>
     <Publish/>
@@ -29,7 +29,7 @@
     <Volume>
       <HostDir>/mnt/user/Music/</HostDir>
       <ContainerDir>/music</ContainerDir>
-      <Mode>ro</Mode>
+      <Mode>rw</Mode>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/daapd</HostDir>
@@ -41,17 +41,23 @@
     <Variable>
       <Value>99</Value>
       <Name>PUID</Name>
-      <Mode/>
+      <Mode>{3}</Mode>
     </Variable>
     <Variable>
       <Value>100</Value>
       <Name>PGID</Name>
-      <Mode/>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value>022</Value>
+      <Name>UMASK</Name>
+      <Mode>{3}</Mode>
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Host Path 2" Target="/music" Default="" Mode="ro" Description="Container Path: /music" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Music/</Config>
-  <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
-  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
-  <Config Name="AppData &#x914D;&#x7F6E;&#x8DEF;&#x5F84;" Target="/config" Default="/mnt/user/appdata/daapd" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/daapd</Config>
+  <Config Name="Path: /music" Target="/music" Default="" Mode="rw" Description="Map to your music folder." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Music/</Config>
+  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/daapd" Mode="rw" Description="Where daapd server stores its config and dbase files." Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/daapd</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="{3}" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="{3}" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="022" Mode="{3}" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
 </Container>
